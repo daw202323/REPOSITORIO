@@ -34,9 +34,19 @@ public class EjemploGITHUB {
 
                 try {
 
-                    numeros.add(sc.nextInt());
+                    int numero = sc.nextInt();
 
-                    quit = true;
+                    if (numeros.indexOf(numero) == -1) {
+
+                        numeros.add(numero);
+
+                        quit = true;
+
+                    } else {
+
+                        System.out.println("[" + (i + 1) + "] POR FAVOR, INTRODUZCA UN NÚMERO DIFERENTE: ");
+
+                    }
 
                 } catch (InputMismatchException e) {
 
