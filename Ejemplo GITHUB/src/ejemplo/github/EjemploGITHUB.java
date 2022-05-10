@@ -46,7 +46,7 @@ public class EjemploGITHUB {
 
                     int numero = sc.nextInt();
 
-                    if (numeros.indexOf(numero) == -1) {
+                    if (validarNumero(numeros, numero) == -1) {
 
                         numeros.add(numero);
 
@@ -77,6 +77,22 @@ public class EjemploGITHUB {
             System.out.println(numero);
 
         }
+
+    }
+
+    public static int validarNumero(Vector<Integer> numeros, int numero) {
+
+        for (int i = 0; i < numeros.size(); i += 1) {
+
+            if (numeros.get(i) == numero) {
+
+                return i;
+
+            }
+
+        }
+
+        return -1;
 
     }
 
