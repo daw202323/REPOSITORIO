@@ -26,13 +26,19 @@ public class EjemploGITHUB {
 
         System.out.println("¿CUANTOS NÚMEROS DESEA INTRODUCIR?");
 
-        int size = sc.nextInt();
+        int size;
 
-        if (size > 10) {
+        do {
 
-            size = 10;
+            size = sc.nextInt();
 
-        }
+            if (size < 1 || size > 10) {
+
+                System.out.println("INTRODUZCA UN VALOR ENTRE [ 1 - 10 ]. ");
+
+            }
+
+        } while (size < 1 || size > 10);
 
         for (int i = 0; numeros.size() < size; i += 1) {
 
