@@ -24,7 +24,17 @@ public class EjemploGITHUB {
 
         Scanner sc = new Scanner(System.in);
 
-        for (int i = 0; numeros.size() < 10; i += 1) {
+        System.out.println("¿CUANTOS NÚMEROS DESEA INTRODUCIR?");
+
+        int size = sc.nextInt();
+
+        if (size > 10) {
+
+            size = 10;
+
+        }
+
+        for (int i = 0; numeros.size() < size; i += 1) {
 
             System.out.println("[" + (i + 1) + "] INTRODUZCA UN NÚMERO: ");
 
